@@ -5,6 +5,7 @@ import { generateCareerRoadmap } from './services/geminiService';
 import Questionnaire from './components/Questionnaire';
 import RoadmapView from './components/RoadmapView';
 import { Compass, Sparkles, Loader2, AlertCircle } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'welcome' | 'form' | 'loading' | 'results' | 'error'>('welcome');
@@ -162,6 +163,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+      <SpeedInsights />
     </div>
   );
 };
